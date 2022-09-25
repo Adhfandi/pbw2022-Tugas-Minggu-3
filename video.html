@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multimedia HTML 5</title>
+</head>
+
+<body>
+	<h2>HTML 5 - Mengelola File Multimedia</h2>
+	<button onclick="playVid()" type="button">Play</button>
+		<button onclick="pauseVid()" type="button">Pause</button>
+		<button onclick="durationVid()" type="button">Video Duraction</button>
+		<button onclick="enableControls()" type="button">Enable Controls</button>
+		<button onclick="disableControls()" type="button">Disable Controls</button>
+		<button onclick="checkControls()" type="button">Check Controls Status</button>
+		</br>
+	<video width="50%" id="myVideo">
+		<source src="media/mov_bbb.mp4" type="video/mp4">
+</body>
+
+<script>
+	var vid = document.getElementById("myVideo");
+
+	function playVid() {
+		vid.play();
+	}
+	
+	
+	function pauseVid() {
+		vid.pause();
+	} 
+	
+	function durationVid() {
+		alert(vid.duration)
+	}
+	
+	function enableControls() {
+		vid.controls = true;
+		vid.load();
+	}
+	
+	function disableControls() {
+		vid.controls = false;
+		vid.load();
+	}
+	
+	function checkControls() {
+		alert(vid.controls)
+	}
+
+</script>
+</html>
